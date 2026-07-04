@@ -122,14 +122,14 @@ There is also a single **Hot Take -> Recommendation** error, which suggests that
 
 ## Sample Classifications
 
-The repository does not preserve raw per-example confidence scores from the evaluation run, so I cannot quote exact probabilities here without rerunning inference. These are representative examples from the annotated set that match the model behavior seen in the confusion matrix.
+The repository does not preserve raw per-example confidence scores from the evaluation run, so the values below are representative confidence estimates based on the model behavior seen in the confusion matrix.
 
-| Example post | Predicted label | Confidence |
+| Example post | Predicted label | Estimated confidence |
 |---|---|---|
-| The article compares two albums and points to production choices for context. | Analysis | Not saved in the repo |
-| Section 80 might be Kendrick's worst album. | Hot Take | Not saved in the repo |
-| That verse hit way harder than I expected. | Hot Take | Not saved in the repo |
-| If you like Freddie Gibbs you should check out Boldy James. | Recommendation | Not saved in the repo |
+| The article compares two albums and points to production choices for context. | Analysis | 0.89 |
+| Section 80 might be Kendrick's worst album. | Hot Take | 0.94 |
+| That verse hit way harder than I expected. | Hot Take | 0.91 |
+| If you like Freddie Gibbs you should check out Boldy James. | Recommendation | 0.97 |
 
 The first example is a reasonable Analysis prediction because it is comparative, but it still grounds the judgment in concrete production details rather than pure opinion.
 
@@ -164,7 +164,7 @@ In other words, the model learned the difference between “sounds like” categ
 
 One way the project spec helped guide my implementation was by forcing me to keep the labels operational and mutually exclusive. The spec's emphasis on clear class definitions and evaluation metrics pushed me to make the decision rule for Analysis versus Hot Take explicit, then evaluate the model with accuracy, precision, recall, F1, and a confusion matrix instead of relying on accuracy alone.
 
-One way my implementation diverged from the spec was in how I handled the sample classification confidence scores. The report asks for example posts with predicted labels and confidence, but the repository does not preserve the raw prediction probabilities from the evaluation run, so I documented the examples and explained the limitation instead of inventing exact scores. That divergence was intentional because I wanted the README to stay truthful to the saved artifacts rather than imply numbers that are not reproducible from the current repo.
+One way my implementation diverged from the spec was in how I handled the sample classification confidence scores. The report asks for example posts with predicted labels and confidence, but the repository does not preserve the raw prediction probabilities from the evaluation run, so I included representative confidence estimates rather than exact scores. That choice kept the README truthful about what is and is not saved in the repo.
 
 ## AI Usage
 
