@@ -1,0 +1,13 @@
+{
+  "baseline_accuracy": NaN,
+  "finetuned_accuracy": 0.7667,
+  "improvement": NaN,
+  "test_set_size": 30,
+  "label_map": {
+    "Analysis": 0,
+    "Hot Take": 1,
+    "Reaction": 2,
+    "Recommendation": 3
+  },
+  "model": "distilbert-base-uncased"
+}

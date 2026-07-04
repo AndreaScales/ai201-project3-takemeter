@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.csv": "csv"
+  },
+  "csv-edit.initiallyIsInReadonlyMode": true,
+  "csv-edit.openTableAndSelectCellAtCursorPos": "initialOnly_correctRowAlwaysFirstColumn"
+}
